@@ -33,7 +33,7 @@ const messages = [
 
 export function Chat() {
   return (
-    <div className={styles.conversation}>
+    <div className={styles.chat}>
       <div className={styles.message_list}>
         {
           messages.map((message) => (
@@ -49,5 +49,3 @@ export function Chat() {
     </div>
   );
 }
-
-function ChatFlow() {}

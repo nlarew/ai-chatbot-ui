@@ -1,7 +1,7 @@
 import TextInput, { TextInputProps } from "@leafygreen-ui/text-input";
 import Icon, { glyphs } from "@leafygreen-ui/icon";
 
-import styles from "./Chat.module.css";
+import styles from "./TextInput.module.css";
 
 type IconInputProps = Omit<TextInputProps, "sizeVariant" | "state"> & {
   glyph: keyof typeof glyphs;

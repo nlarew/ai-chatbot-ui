@@ -13,6 +13,14 @@
   position: relative;
 }
 
+.message_avatar_user {
+
+}
+
+.message_avatar_assistant {
+  background: black;
+}
+
 .message_avatar_icon {
   position: absolute;
   left: 12px;
