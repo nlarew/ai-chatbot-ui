@@ -10,7 +10,6 @@ function Avatar() {
   );
 }
 
-
 export type MessageData = {
   id: string;
   text: string;
