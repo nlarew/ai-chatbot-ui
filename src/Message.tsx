@@ -1,5 +1,6 @@
 import Icon from "@leafygreen-ui/icon";
-import { Body } from "@leafygreen-ui/typography";
+import IconButton from "@leafygreen-ui/icon-button";
+import { Body, Description } from "@leafygreen-ui/typography";
 import styles from "./Message.module.css";
 
 export type SenderType = "user" | "assistant" | "system";
@@ -43,11 +44,28 @@ function Avatar({ type }: { type: SenderType }) {
   );
 }
 
+export function MessageRating() {
+  return (
+    <div className={styles.message_rating}>
+      <Description>Rate this response:</Description>
+      <IconButton size="large" aria-label="Thumbs Up">
+        <Icon className={styles.message_rating_icon} glyph="ArrowUp" />
+      </IconButton>
+      <IconButton size="large" aria-label="Thumbs Down">
+        <Icon className={styles.message_rating_icon} glyph="ArrowDown" />
+      </IconButton>
+    </div>
+  );
+}
+
 export function Message({ message }: { message: MessageData }) {
   return (
     <div className={styles.message}>
       <Avatar type={message.sender.type} />
-      <Body className={styles.message_text}>{message.text}</Body>
+      <div className={styles.message_text}>
+        <Body baseFontSize={16}>{message.text}</Body>
+        {message.sender.type === "assistant" && <MessageRating />}
+      </div>
     </div>
   );
 }

@@ -41,7 +41,7 @@ export function Chat() {
           ))
         }
       </div>
-      <Banner>
+      <Banner variant="warning">
         This is an experimental AI chatbot. All information should be verified
         prior to use.
       </Banner>

@@ -7,7 +7,7 @@
 .message_list {
   display: flex;
   flex-direction: column;
-  max-height: 200px;
+  max-height: 750px;
   /* border: 1px solid gray; */
   overflow-y: scroll;
   gap: 12px;
@@ -22,7 +22,7 @@
 
 /* Track */
 .message_list::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #ffffff;
 }
 
 /* Handle */
