@@ -14,6 +14,17 @@ export type MessageData = {
   };
 };
 
+export function createMessage(senderType: SenderType, text: string): MessageData {
+  return {
+    id: Math.random().toString(),
+    text,
+    sender: {
+      id: Math.random().toString(),
+      type: senderType,
+    },
+  }
+}
+
 function Avatar({ type }: { type: SenderType }) {
   const className = {
     user: `${styles.message_avatar} ${styles.message_avatar_user}`,
