@@ -13,3 +13,24 @@
   gap: 12px;
   margin-top: 12px;
 }
+
+/* width */
+.message_list::-webkit-scrollbar {
+  width: 3px;
+  background: #D9D9D9;
+}
+
+/* Track */
+.message_list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.message_list::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.message_list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
